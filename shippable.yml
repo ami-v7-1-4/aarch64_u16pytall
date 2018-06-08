@@ -1,0 +1,30 @@
+language: python
+
+# Version number
+python:
+  - 2.7 #.12
+  - 3.5 #.2 
+  - 3.6 #.5 
+  - 3.7 #.0
+
+runtime:
+  nodePool: custom__aarch64__Ubuntu_16_04
+
+build:
+  pre_ci_boot:
+    image_name: drydock/aarch64_u16pytall
+    image_tag: master
+    pull: true
+    
+  ci:
+    - python -V
+    - docker ps
+    - docker images
+    - docker pull shippabledocker/sample_node_pvt:ecr
+    
+integrations:
+    
+  hub:
+ #Docker integration
+    - integrationName: ship-docker
+      type: dockerRegistryLogin
