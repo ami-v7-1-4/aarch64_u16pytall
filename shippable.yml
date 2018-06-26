@@ -3,9 +3,7 @@ language: python
 # Version number
 python:
   - 2.7 #.12
-  - 3.5 #.2 
-  - 3.6 #.5 
-  - 3.7 #.0
+  - 3.6 #.5
 
 runtime:
   nodePool: custom__aarch64__Ubuntu_16_04
