@@ -25,4 +25,4 @@ integrations:
   hub:
  #Docker integration
     - integrationName: ship-docker
-      type: dockerRegistryLogin
+      type: dockerRegistryLogin 
